@@ -27,8 +27,9 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: cd ..
-    - name: create branch
-      run: git checkout -b ${{ github.event.inputs.name }} develop
-    - name: commit branch
-      run: git push -u origin ${{ github.event.inputs.name }}  
+      run: echo "${{ github.event.inputs.name }}"
+    - uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: "${{ github.event.inputs.name }}" 
