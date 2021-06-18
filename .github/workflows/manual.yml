@@ -27,7 +27,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "cd .."
+      run: cd ..
     - name: create branch
       run: git checkout -b ${{ github.event.inputs.name }} develop
     - name: commit branch
