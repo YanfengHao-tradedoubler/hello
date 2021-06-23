@@ -1,0 +1,2 @@
+
+  version = System.getProperty('herculesVersion') ?: '2.1.1'
