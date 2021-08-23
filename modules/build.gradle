@@ -1,2 +1,2 @@
 
-  version = System.getProperty('herculesVersion')?: '1.4'//end of version
+  version = System.getProperty('herculesVersion')?: '1.9'//end of version
